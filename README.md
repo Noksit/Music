@@ -7,4 +7,6 @@ Music
 
 `npm install`
 
-`start RUN.bat`
+`npm start`
+
+go on localhost:4444
