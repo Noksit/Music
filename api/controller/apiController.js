@@ -1,10 +1,10 @@
 'use strict';
 let YoutubeMp3Downloader = require('youtube-mp3-downloader');
-let ffmpeg = require('ffmpeg-static');
+let ffmpegStatic = require('ffmpeg-static');
 
 exports.download = function (req, res) {
     let YD = new YoutubeMp3Downloader({
-        "ffmpeg": ffmpeg.path,
+        "ffmpeg": ffmpegStatic.path,
         "outputPath": "./output",               // Where should the downloaded and encoded files be stored?
         "youtubeVideoQuality": "highest",       // What video quality should be used?
     });
