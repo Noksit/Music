@@ -18,11 +18,11 @@ Go into dir
 
     cd Music
 
-Run
+Install dependencies
 
     npm install
 
-Run
+Start
 
     npm start
 
@@ -31,3 +31,4 @@ Done !
 Now you can go on [http://localhost:8001](http://localhost:8001)
 
 Downloaded music will be stored into ./output folder
+
