@@ -3,7 +3,7 @@ let YoutubeMp3Downloader = require('youtube-mp3-downloader');
 
 exports.download = function (req, res) {
     let YD = new YoutubeMp3Downloader({
-        "outputPath": "../Output",    // Where should the downloaded and encoded files be stored?
+        "outputPath": "output",    // Where should the downloaded and encoded files be stored?
         "youtubeVideoQuality": "highest",       // What video quality should be used?
     });
     let id = req.params.id;
