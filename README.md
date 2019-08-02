@@ -1,12 +1,10 @@
 # Music
 Music
 
-Download FFMPEG From https://ffmpeg.org
-Paste downloaded folder into ./Server
+`git clone https://github.com/Noksit/Music.git`
 
-Cd ./Server
-npm install
+`cd Music`
 
-Edit ./RUN.bat and change "ChromeLauncherPath" to the AbsolutePath for Chrome.
+`npm install`
 
-Run ./RUN.bat
+`start RUN.bat`
