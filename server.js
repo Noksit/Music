@@ -8,7 +8,6 @@ let routes = require('./api/routes/apiRoutes');
 routes(app);
 
 app.set('views', './views');
-app.set('script', './views/script.js');
 app.set('view engine', 'jade');
 
 
