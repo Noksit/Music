@@ -12,5 +12,6 @@ app.set('view engine', 'jade');
 
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}!`);
+    console.log(`Enjoy =)`);
+    console.log(`http://localhost:${port}!`);
 });
