@@ -18,15 +18,14 @@ body.m-2
                 show(loader)
                 let input = $("#input");
                 let inputValue = input.val()
-                let video_id = inputValue.split('v=')[1];
-                let ampersandPosition = video_id.indexOf('&');
-                if (ampersandPosition != -1) {
-                    video_id = video_id.substring(0, ampersandPosition);
+                let videoID = inputValue.split('v=')[1];
+                let andPosition = videoID.indexOf('&');
+                if (andPosition != -1) {
+                    videoID = videoID.substring(0, andPosition);
                 }
-                inputValue = video_id;
                 $.ajax({
                     method: 'get',
-                    url: "http://localhost:8001/download/" + inputValue
+                    url: "http://localhost:8001/download/" + videoID
                 }).fail(function (fail) {
                     console.log(fail);
                 }).always(function () {
