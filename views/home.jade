@@ -6,12 +6,18 @@ head
 body
     script.
         $(document).ready(function () {
-            $("#loader").hide()
-            $('#mainInput').change(function () {
-                $("#loader").removeClass("d-none")
-                $("#loader").addClass("d-flex")
-                let that = $(this);
-                let inputValue = that.val()
+            $('#input').keyup(function (e) {
+                if (e.keyCode == 13) {
+                    post()
+                }
+            });
+            $('#btn').on('click', post);
+
+            function post() {
+                let loader = $("#loader");
+                show(loader)
+                let input = $("#input");
+                let inputValue = input.val()
                 let video_id = inputValue.split('v=')[1];
                 let ampersandPosition = video_id.indexOf('&');
                 if (ampersandPosition != -1) {
@@ -24,13 +30,20 @@ body
                 }).fail(function (fail) {
                     console.log(fail);
                 }).always(function () {
-                    $("#loader").removeClass("d-flex")
-                    $("#loader").addClass("d-none")
-                    that.val('');
+                    hide(loader)
+                    input.val("")
                 })
+            }
 
+            function show(object) {
+                object.removeClass("d-none")
+                object.addClass("d-flex")
+            }
 
-            });
+            function hide(object) {
+                object.removeClass("d-flex")
+                object.addClass("d-none")
+            }
         });
     div.container
         div.jumbotron
@@ -39,8 +52,8 @@ body
             .input-group.flex-nowrap
                 .input-group-prepend
                 span#addon-wrapping.input-group-text Youtube Url::
-                input.form-control(id="mainInput" type='text', aria-label='Username', aria-describedby='addon-wrapping')
-
+                input.form-control(id="input" type='text', aria-label='Username', aria-describedby='addon-wrapping')
+                button.btn.btn-primary(id="btn") Valider
 
             div(id="loader").row.p-5.d-none.justify-content-center
                 .spinner-border(role='status')
