@@ -1,18 +1,14 @@
 # Music
-First::
-
+First:: 
 `git clone https://github.com/Noksit/Music.git`
 
-Then::
-
+Then:: 
 `cd Music`
 
-Then::
-
+Then:: 
 `npm install`
 
-Then::
-
+Then:: 
 `npm start`
 
 Done !
