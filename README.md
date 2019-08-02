@@ -12,3 +12,5 @@ Music
 Go on http://localhost:8001
 
 Enjoy !
+
+Downloaded will be stored into ./output folder
