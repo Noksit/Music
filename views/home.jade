@@ -1,0 +1,46 @@
+html
+head
+    title=title
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    link(href='//netdna.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', rel='stylesheet')
+body
+    script.
+        $(document).ready(function () {
+            $("#loader").hide()
+            $('#mainInput').change(function () {
+                $("#loader").removeClass("d-none")
+                $("#loader").addClass("d-flex")
+                let that = $(this);
+                let inputValue = that.val()
+                let video_id = inputValue.split('v=')[1];
+                let ampersandPosition = video_id.indexOf('&');
+                if (ampersandPosition != -1) {
+                    video_id = video_id.substring(0, ampersandPosition);
+                }
+                inputValue = video_id;
+                $.ajax({
+                    method: 'get',
+                    url: "http://192.168.0.161:8001/download/" + inputValue
+                }).fail(function (fail) {
+                    console.log(fail);
+                }).always(function () {
+                    $("#loader").removeClass("d-flex")
+                    $("#loader").addClass("d-none")
+                    that.val('');
+                })
+
+
+            });
+        });
+    div.container
+        div.jumbotron
+            h1 Youtube Url ::
+            div.row
+            .input-group.flex-nowrap
+                .input-group-prepend
+                span#addon-wrapping.input-group-text Youtube Url::
+                input.form-control(id="mainInput" type='text', aria-label='Username', aria-describedby='addon-wrapping')
+
+
+            div(id="loader").row.p-5.d-none.justify-content-center
+                .spinner-border(role='status')
