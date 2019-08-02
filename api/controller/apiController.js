@@ -6,7 +6,7 @@ exports.download = function (req, res) {
     console.log(ffmpeg.path);
     let YD = new YoutubeMp3Downloader({
         "ffmpeg": ffmpeg.path,
-        "outputPath": "output",    // Where should the downloaded and encoded files be stored?
+        "outputPath": "./output",    // Where should the downloaded and encoded files be stored?
         "youtubeVideoQuality": "highest",       // What video quality should be used?
     });
     let id = req.params.id;
