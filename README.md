@@ -9,4 +9,6 @@ Music
 
 `npm start`
 
-go on http://localhost:4444
+Go on http://localhost:8001
+
+Enjoy !
