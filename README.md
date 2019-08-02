@@ -1,23 +1,33 @@
-# Music
+# Youtube Music Downloader::
 
-1. Clone the code 
+##### npm::
+Gonna need npm,
+you can download it [here](https://nodejs.org/en/)
 
-        git clone https://github.com/Noksit/Music.git
+Then check if path is installed.
 
-2. Go into dir
+    npm -v
 
-        cd Music
+##### todo::
 
-3. Run
+Clone the code
 
-        npm install
+    git clone https://github.com/Noksit/Music.git
 
-4. Run
+Go into dir
 
-        npm start
+    cd Music
+
+Run
+
+    npm install
+
+Run
+
+    npm start
 
 Done !
 
-Go on [http://localhost:8001](http://localhost:8001)
+Now you can go on [http://localhost:8001](http://localhost:8001)
 
-Downloaded will be stored into ./output folder
+Downloaded music will be stored into ./output folder
