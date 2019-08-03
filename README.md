@@ -28,7 +28,7 @@ Then check if path is installed.
 
         npm start
         
-or
+    or
 
         start RunMe.bat
         
