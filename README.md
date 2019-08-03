@@ -7,15 +7,7 @@ you can download it [here](https://nodejs.org/en/)
 Then check if path is installed.
 
     npm -v
-
-### ffmpeg::
-
-Gonna need ffmpeg too, you can download it [here](https://ffmpeg.org)
-
-Then check if path is installed.
-
-    ffmpeg --version
-
+    
 ### todo::
 
 1.  Clone the code
@@ -32,7 +24,14 @@ Then check if path is installed.
 
 4.  Start
 
+        SET PATH=%PATH%;%cd%\node_modules\ffmpeg-static\bin\win32\x64
+
         npm start
+        
+or
+
+        start RunMe.bat
+        
 
 5.  Done !
 
