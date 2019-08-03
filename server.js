@@ -12,6 +12,21 @@ app.set('view engine', 'jade');
 
 
 app.listen(port, () => {
-    console.log(`Enjoy =)`);
-    console.log(`http://localhost:${port}!`);
+	console.log(`
+	Everything looks OK.
+	Do not close that window
+	Enjoy =)`);
+	
+	console.log(`
+	|---------------------------|
+	|			    |
+	|  App available on:        |
+	|   http://localhost:${port}   |
+	|			    |
+	|---------------------------|
+		(\\__/) || 
+		( •_•) || 
+		/   |  ||`)
+    
 });
+
