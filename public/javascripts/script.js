@@ -7,9 +7,6 @@ $(document).ready(function () {
     $('#btn').on('click', post);
 
     function post() {
-
-        // let loader = $("#loader");
-        // show(loader)
         let input = $("#input");
         let inputValue = input.val()
         let videoID = inputValue.split('v=')[1];
@@ -39,7 +36,6 @@ $(document).ready(function () {
             console.log(fail);
         }).always(function () {
             $("#" + videoID).remove();
-            // hide(loader)
         })
     }
 
