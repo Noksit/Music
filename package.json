@@ -9,12 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "clean-css": ">=4.1.11",
+    "constantinople": ">=3.1.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "ffmpeg-static": "^2.5.0",
     "jade": "^1.11.0",
-    "youtube-mp3-downloader": "^0.6.2",
-    "constantinople": ">=3.1.1",
-    "clean-css": ">=4.1.11"
+    "serve-favicon": "^2.5.0",
+    "youtube-mp3-downloader": "^0.6.2"
   }
 }

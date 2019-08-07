@@ -3,46 +3,8 @@ head
     title=title
     script(src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
     link(href='//netdna.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', rel='stylesheet')
-    script.
-        $(document).ready(function () {
-            $('#input').keyup(function (e) {
-                if (e.keyCode == 13) {
-                    post()
-                }
-            });
-            $('#btn').on('click', post);
-
-            function post() {
-                let loader = $("#loader");
-                show(loader)
-                let input = $("#input");
-                let inputValue = input.val()
-                let videoID = inputValue.split('v=')[1];
-                let andPosition = videoID.indexOf('&');
-                if (andPosition != -1) {
-                    videoID = videoID.substring(0, andPosition);
-                }
-                $.ajax({
-                    method: 'get',
-                    url: "http://localhost:8001/download/" + videoID
-                }).fail(function (fail) {
-                    console.log(fail);
-                }).always(function () {
-                    hide(loader)
-                    input.val("")
-                })
-            }
-
-            function show(object) {
-                object.removeClass("d-none")
-                object.addClass("d-flex")
-            }
-
-            function hide(object) {
-                object.removeClass("d-flex")
-                object.addClass("d-none")
-            }
-        });
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="/javascripts/script.js")
 body.m-2
     div.container
         div.jumbotron
@@ -50,9 +12,10 @@ body.m-2
             div.row
             .input-group.flex-nowrap
                 .input-group-prepend
-                span#addon-wrapping.input-group-text Youtube Url::
+                span#addon-wrapping.input-group-text Url::
                 input.form-control(id="input" type='text', aria-label='Username', aria-describedby='addon-wrapping')
-                button.btn.btn-primary(id="btn") Gotcha!
+                button.btn.btn-primary.ml-1(id="btn") DL!
 
             div(id="loader").row.p-5.d-none.justify-content-center
                 .spinner-border(role='status')
+            div.row(id="row")
